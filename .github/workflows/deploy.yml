@@ -27,7 +27,7 @@ jobs:
 
       - name: Genearate config shell script
         env:
-            REACT_APP_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+            GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: |
             sh ./generate_configs.sh
 
