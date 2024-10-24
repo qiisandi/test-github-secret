@@ -29,15 +29,3 @@ jobs:
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           publish_dir: ./build # directory to deploy
-
-      - name: Store Google Maps API key as GitHub Secret
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.rest.actions.createOrUpdateRepoSecret({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              secret_name: 'REACT_APP_GOOGLE_MAPS_API_KEY',
-              secret_value: '${{ secrets.GOOGLE_MAPS_API_KEY }}'
-            })
-          token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}

@@ -1,5 +1,6 @@
 {
   "name": "test-github-secret",
+  "homepage": "https://qiisandi.github.io/test-github-secret/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
