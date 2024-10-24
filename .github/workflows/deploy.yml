@@ -21,6 +21,10 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Set env from secrets
+        run: |
+          echo "REACT_APP_GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}" >> $GITHUB_ENV
+
       - name: Build app
         run: yarn run build:demo
         env:
